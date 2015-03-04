@@ -6,7 +6,10 @@ erik@a8.nl
 license: gpl2
 """
 
-__author__ = 'rabshakeh'
+import os
+import cProfile
+from pstats import Stats
+from cProfile import Profile
 
 
 def start_profile():
@@ -14,7 +17,6 @@ def start_profile():
     start_profile
     @rtype: Profile
     """
-    from cProfile import Profile
     pr = Profile()
     pr.enable()
     return pr
@@ -34,7 +36,6 @@ def end_profile(pr, items=20, printstats=False):
     @type items: int
     @type printstats: bool
     """
-    from pstats import Stats
     p = Stats(pr)
     p.strip_dirs()
     console("total time")
@@ -69,9 +70,6 @@ def runsnake_profile_method(method, cglobals, clocals):
     @type clocals: dict
     @return: None
     """
-
-    import cProfile
-    import os
     cProfile.runctx(method + "()", globals=cglobals, locals=clocals, filename=method + ".profile")
     os.system("python /usr/local/lib/python2.7/site-packages/runsnakerun/runsnake.py " + method + ".profile")
     os.system("rm " + method + ".profile")
@@ -82,8 +80,6 @@ def graph_profile_program(sourcefile):
     @type sourcefile: str, unicode
     @return: None
     """
-
-    import os
     if 0 != os.system("python -m cProfile -o output.pstats ./" + sourcefile):
         print "\033[31mprofile error:\033[0m"
         print "\033[33m", "pip install graphviz", "\033[0m"

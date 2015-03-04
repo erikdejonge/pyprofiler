@@ -9,8 +9,12 @@ meth2()
 meth3()
 meth4()
 end_profile(profiler)
+
 ```
 ```bash
+# sample
+python run_graph_main.py
+
 $ total time
          42 function calls (39 primitive calls) in 2.018 seconds
 
@@ -39,11 +43,16 @@ $ total time
         1    0.000    0.000    0.000    0.000 {hasattr}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 ```
-###graphical representation, needs wxpython and runsnakerun
+
+###graphical representation, needs  and graphviz
 ```bash
-brew install wxPython
-pip install runsnakerun
+# requirements
+pip install gprof2dot
+brew install graphviz
+# sample program
+python main_graph.py
 ```
+
 
 ```python
 from pyprofiler import graph_profile_program
@@ -52,91 +61,19 @@ graph_profile_program("main_graph.py")
 
 ![screenshot](main_graph.png)
 
-###graphical representation, needs wxpython and runsnakerun
+###callgraph, needs wxpython and runsnakerun
 ```bash
+# requirements
 brew install wxPython
 pip install runsnakerun
+# sample
 python run_graph_main.py
 ```
 
 ```python
+#implementation, call method aggregate
 runsnake_profile_method("aggregate", globals(), locals())
 ```
 
 ![screenshot](snake.png)
 
-
-##sample program used
-```python
-
-def call_next(funcs=None):
-    """
-    @type funcs: None, list
-    @return: None
-    """
-    if funcs:
-        func = funcs.pop()
-
-        if func:
-            func(funcs)
-
-
-def meth1(funcs=None):
-    """
-    @type funcs: None, list
-    @return: None
-    """
-    print "method 1"
-    time.sleep(0.1)
-    call_next(funcs)
-
-
-def meth2(funcs=None):
-    """
-    @type funcs: None, list
-    @return: None
-    """
-    print "method 2"
-    time.sleep(0.2)
-    call_next(funcs)
-
-
-def meth3(funcs=None):
-    """
-    @type funcs: None, list
-    @return: None
-    """
-    print "method 3"
-    time.sleep(0.3)
-    call_next(funcs)
-
-
-def meth4(funcs=None):
-    """
-    @type funcs: None, list, None
-    @return: None
-    """
-    print "method 4"
-    time.sleep(0.4)
-    call_next(funcs)
-
-
-def aggregate():
-    """
-    aggregate
-    """
-    print "aggregate"
-    funcs = [meth1, meth2, meth3]
-    meth4(funcs)
-
-
-def main():
-    """
-    main
-    """
-    meth1()
-    meth2()
-    meth3()
-    meth4()
-    aggregate()
-```

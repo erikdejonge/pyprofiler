@@ -1,0 +1,7 @@
+wxPython
+runsnakerun
+gprof2dot
+graphviz
+cProfile
+pstats
+cProfile
