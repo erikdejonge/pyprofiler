@@ -1,4 +1,7 @@
+
 .idea
+build
+appinstance.egg-info
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

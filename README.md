@@ -1,7 +1,12 @@
 # pyprofiler
 Profiler utility for python
 
-###profile some code in body
+###install
+```bash
+pip install pyprofiler
+```
+
+###profile code in source
 ```python
 profiler = start_profile()
 meth1()
@@ -11,6 +16,7 @@ meth4()
 end_profile(profiler)
 
 ```
+
 ```bash
 # sample
 python run_graph_main.py
@@ -32,16 +38,7 @@ $ total time
       8/5    0.000    0.000    0.604    0.121 main_profile.py:10(call_next)
         2    0.000    0.000    1.406    0.703 main_profile.py:52(meth4)
         1    0.000    0.000    1.006    1.006 main_profile.py:62(aggregate)
-        1    0.000    0.000    0.000    0.000 pstats.py:32(Stats)
-        3    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
-        1    0.000    0.000    0.000    0.000 pstats.py:62(__init__)
-        1    0.000    0.000    0.000    0.000 {isinstance}
-        1    0.000    0.000    0.000    0.000 pstats.py:106(load_stats)
-        1    0.000    0.000    0.000    0.000 pstats.py:84(init)
-        1    0.000    0.000    0.000    0.000 cProfile.py:90(create_stats)
-        1    0.000    0.000    0.000    0.000 pstats.py:451(TupleComp)
-        1    0.000    0.000    0.000    0.000 {hasattr}
-        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
 ```
 
 ###graphical representation, needs  and graphviz
