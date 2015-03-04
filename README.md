@@ -21,7 +21,7 @@ pip install runsnakerun
 graph_profile_program("main_graph.py")
 ```
 
-[screenshot](./main_graph.png)
+[screenshot](main_graph.png)
 
 ###graphical representation, needs wxpython and runsnakerun
 ```bash
@@ -34,4 +34,4 @@ python run_graph_main.py
 runsnake_profile_method("aggregate", globals(), locals())
 ```
 
-[screenshot](./snake.png)
+[screenshot](snake.png)
