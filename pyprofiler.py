@@ -1,3 +1,10 @@
+# coding=utf-8
+"""
+Profiler utility for python
+Erik de Jonge
+erik@a8.nl
+license: gpl2
+"""
 
 __author__ = 'rabshakeh'
 
@@ -13,19 +20,20 @@ def start_profile():
     return pr
 
 
+def console(x):
+    """
+    @type x: str, unicode
+    @return: None
+    """
+    print "\033[93m$", x, "\033[0m"
+
+
 def end_profile(pr, items=20, printstats=False):
     """
     @type pr: Profile
     @type items: int
     @type printstats: bool
     """
-    if not "console" in globals():
-        def console(x):
-            """
-            @type x: str, unicode
-            @return: None
-            """
-            print "\033[93m$", x, "\033[0m"
     from pstats import Stats
     p = Stats(pr)
     p.strip_dirs()

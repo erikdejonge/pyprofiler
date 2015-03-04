@@ -1,6 +1,11 @@
-
+# coding=utf-8
 """
-test for pyprofile
+Profiler utility for python
+
+
+Erik de Jonge
+erik@a8.nl
+license: gpl2
 """
 from pyprofiler import graph_profile_program
 
