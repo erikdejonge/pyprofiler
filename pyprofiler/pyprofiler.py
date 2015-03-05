@@ -30,13 +30,16 @@ def console(x):
     print "\033[93m$", x, "\033[0m"
 
 
-def end_profile(pr, items=20, printstats=False):
+def end_profile(pr, items=20, printstats=False, returnvalue=False):
     """
     @type pr: Profile
     @type items: int
     @type printstats: bool
     """
     p = Stats(pr)
+    if returnvalue is True:
+        return p.get_print_list([items])
+
     p.strip_dirs()
     console("total time")
     p.sort_stats('time')

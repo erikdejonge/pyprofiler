@@ -24,7 +24,9 @@ def meth1(funcs=None):
     @type funcs: None, list
     @return: None
     """
-    print "method 1"
+    if funcs:
+        print "method 1"
+
     time.sleep(0.1)
     call_next(funcs)
 
@@ -34,7 +36,9 @@ def meth2(funcs=None):
     @type funcs: None, list
     @return: None
     """
-    print "method 2"
+    if funcs:
+        print "method 2"
+
     time.sleep(0.2)
     call_next(funcs)
 
@@ -44,7 +48,9 @@ def meth3(funcs=None):
     @type funcs: None, list
     @return: None
     """
-    print "method 3"
+    if funcs:
+        print "method 3"
+
     time.sleep(0.3)
     call_next(funcs)
 
@@ -54,7 +60,9 @@ def meth4(funcs=None):
     @type funcs: None, list, None
     @return: None
     """
-    print "method 4"
+    if funcs:
+        print "method 4"
+
     time.sleep(0.4)
     call_next(funcs)
 
@@ -66,6 +74,18 @@ def aggregate():
     print "aggregate"
     funcs = [meth1, meth2, meth3]
     meth4(funcs)
+
+
+def get_print_list():
+    """
+    get_print_list
+    """
+    profiler = start_profile()
+    meth1()
+    meth2()
+    meth3()
+    meth4()
+    return end_profile(profiler, returnvalue=True)
 
 
 def main():
