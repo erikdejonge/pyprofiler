@@ -32,14 +32,16 @@ def console(x):
 
 def end_profile(pr, items=20, printstats=False, returnvalue=False):
     """
-    @type pr: Profile
+    @type pr: str, unicode
     @type items: int
     @type printstats: bool
+    @type returnvalue: bool
+    @return: None
     """
     p = Stats(pr)
+
     if returnvalue is True:
         return p.get_print_list([items])
-
     p.strip_dirs()
     console("total time")
     p.sort_stats('time')
