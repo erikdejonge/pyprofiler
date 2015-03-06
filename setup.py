@@ -19,4 +19,15 @@ setup(name='pyprofiler',
       author_email='erik@a8.nl',
       license='GPL',
       packages=['pyprofiler'],
-      zip_safe=True)
+      zip_safe=True,
+      classifiers=[
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Development Status :: Beta",
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
+          "Operating System :: POSIX",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "Topic :: Software Development :: Testing,"
+          "Topic :: System",
+      ])
