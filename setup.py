@@ -12,7 +12,7 @@ from future import standard_library
 standard_library.install_aliases()
 from setuptools import setup
 setup(name='pyprofiler',
-      version='15',
+      version='16',
       description='Profiler utility for python, graphical and textual, whole program or segments',
       url='https://github.com/erikdejonge/pyprofiler',
       author='Erik de Jonge',
