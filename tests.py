@@ -10,7 +10,8 @@ from __future__ import division
 from __future__ import absolute_import
 from future import standard_library
 standard_library.install_aliases()
-from unittester import *
+import unittest
+from unittester import unit_test_main
 from main_profile import *
 
 
