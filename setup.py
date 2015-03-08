@@ -23,6 +23,7 @@ setup(name='pyprofiler',
           "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
           "Operating System :: POSIX",
           "Topic :: Software Development :: Libraries :: Python Modules",
-          "Topic :: Software Development :: Testing,"
+          "Topic :: System :: Clustering",
+          "Topic :: System :: Distributed Computing",
           "Topic :: System",
       ])
