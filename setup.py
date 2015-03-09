@@ -7,7 +7,7 @@ license: GNU-GPL2
 
 from setuptools import setup
 setup(name='pyprofiler',
-      version='13',
+      version='18',
       description='Profiler utility for python, graphical and textual, whole program or segments',
       url='https://github.com/erikdejonge/pyprofiler',
       author='Erik de Jonge',
@@ -23,7 +23,6 @@ setup(name='pyprofiler',
           "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
           "Operating System :: POSIX",
           "Topic :: Software Development :: Libraries :: Python Modules",
-          "Topic :: System :: Clustering",
-          "Topic :: System :: Distributed Computing",
+          "Topic :: Software Development :: Testing,"
           "Topic :: System",
       ])
