@@ -1,3 +1,4 @@
+future
 wxPython
 runsnakerun
 gprof2dot
