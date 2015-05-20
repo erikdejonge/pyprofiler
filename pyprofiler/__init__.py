@@ -33,7 +33,7 @@ def console(x):
     @type x: str, unicode
     @return: None
     """
-    print("\033[93m$", x, "\033[0m")
+    print("\033[33m$", x, "\033[0m")
 
 
 def end_profile(pr, items=20, printstats=False, returnvalue=False):
