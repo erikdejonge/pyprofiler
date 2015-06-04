@@ -7,7 +7,7 @@ license: GNU-GPL2
 
 from setuptools import setup
 setup(name='pyprofiler',
-      version='47',
+      version='48',
       description='Profiler utility for python, graphical and textual, whole program or segments',
       url='https://github.com/erikdejonge/pyprofiler',
       author='Erik de Jonge',
