@@ -12,5 +12,5 @@ setup(name='pyprofiler',
       author='Erik de Jonge',
       author_email='erik@a8.nl',
       license='GPL',
-      packages=['pyprofiler'],
+      packages=[b'pyprofiler'],
       zip_safe=True)
